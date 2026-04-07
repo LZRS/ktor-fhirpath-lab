@@ -4,7 +4,6 @@ val logback_version: String by project
 plugins {
     kotlin("jvm") version "2.3.0"
     id("io.ktor.plugin") version "3.4.2"
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.3.0"
 }
 
 group = "dev.ohs"
@@ -22,9 +21,7 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:${logback_version}")
     implementation("com.google.fhir:fhir-model-jvm:1.0.0-beta02")
     implementation("com.google.fhir:fhir-path-jvm:1.0.0-beta01")
-    implementation("io.ktor:ktor-serialization-kotlinx-json")
     implementation("io.ktor:ktor-server-auto-head-response")
-    implementation("io.ktor:ktor-server-content-negotiation")
     implementation("io.ktor:ktor-server-config-yaml")
     implementation("io.ktor:ktor-server-core")
     implementation("io.ktor:ktor-server-cors")
