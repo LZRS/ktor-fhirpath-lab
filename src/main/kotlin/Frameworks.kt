@@ -5,6 +5,11 @@ import io.ktor.server.plugins.di.*
 
 fun Application.configureFrameworks() {
     dependencies {
-        provide { GreetingService { "Hello, World!" } }
+        provide<RequestHandler>("FhirpathR4Handler") {
+            R4FhirpathRequestHandler()
+        }
+        provide<RequestHandler>("FhirpathR5Handler") {
+            R5RequestHandler()
+        }
     }
 }
